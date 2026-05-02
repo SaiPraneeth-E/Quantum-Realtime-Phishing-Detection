@@ -1,0 +1,17 @@
+name: Deploy
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  deploy-summary:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployment notice
+        run: |
+          echo "Use platform-native deploy hooks/secrets:"
+          echo "1) Vercel auto-deploys frontend from /frontend"
+          echo "2) Render auto-deploys backend + ml_service via render.yaml"
+          echo "3) MongoDB Atlas is external and configured via env vars"

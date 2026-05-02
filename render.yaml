@@ -1,0 +1,44 @@
+services:
+  - type: web
+    name: quantum-phishing-backend
+    runtime: node
+    rootDir: backend
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: "5000"
+      - key: FRONTEND_URL
+        sync: false
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: ML_SERVICE_URL
+        sync: false
+      - key: CONTACT_EMAIL
+        sync: false
+      - key: GMAIL_USER
+        sync: false
+      - key: GMAIL_APP_PASSWORD
+        sync: false
+      - key: ROOT_ADMIN_EMAIL
+        sync: false
+      - key: ROOT_ADMIN_PASSWORD
+        sync: false
+      - key: ROOT_ADMIN_NAME
+        sync: false
+
+  - type: web
+    name: quantum-phishing-ml-service
+    runtime: docker
+    rootDir: backend/ml_service
+    dockerfilePath: ./Dockerfile
+    plan: free
+    envVars:
+      - key: PORT
+        value: "8000"
+

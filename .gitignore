@@ -1,0 +1,152 @@
+# =========================
+# 🔹 Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# =========================
+# 🔹 Virtual Environments
+# =========================
+.venv/
+venv/
+**/venv/
+backend/ml_service/venv2/
+
+# =========================
+# 🔹 Environment Variables
+# =========================
+.env
+**/.env
+.env.*
+*.env
+
+# =========================
+# 🔹 Logs & Debug Files
+# =========================
+*.log
+pip-log.txt
+pip-delete-this-directory.txt
+
+# =========================
+# 🔹 Unit Test / Coverage
+# =========================
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+
+# =========================
+# 🔹 Jupyter Notebook
+# =========================
+.ipynb_checkpoints
+
+# =========================
+# 🔹 ML / AI Model Files (IMPORTANT)
+# =========================
+*.pkl
+*.h5
+*.hdf5
+*.joblib
+*.pt
+*.pth
+*.onnx
+*.sav
+
+# Protect critical project models
+!backend/ml_service/random_forest.pkl
+!backend/ml_service/xgboost.pkl
+!backend/ml_service/deep_learning.h5
+!backend/ml_service/doc2vec.pkl
+!backend/ml_service/quantum_proxy.pkl
+!backend/ml_service/scaler.pkl
+
+# =========================
+# 🔹 Data Files (Optional)
+# =========================
+*.csv
+*.tsv
+*.xlsx
+*.jsonl
+
+# =========================
+# 🔹 Node.js
+# =========================
+node_modules/
+**/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =========================
+# 🔹 Build / Distribution
+# =========================
+dist/
+build/
+*.egg-info/
+.eggs/
+*.whl
+
+# =========================
+# 🔹 Vite / Frontend
+# =========================
+.vite/
+**/.vite/
+
+# =========================
+# 🔹 Docker
+# =========================
+Dockerfile.local
+docker-compose.override.yml
+
+# =========================
+# 🔹 IDEs / Editors
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+.project
+.settings/
+
+# =========================
+# 🔹 OS Files
+# =========================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# =========================
+# 🔹 GitHub / CI
+# =========================
+.github/workflows/*.local.yml
+
+# =========================
+# 🔹 Temporary / Misc
+# =========================
+tmp/
+temp/
+*.tmp
+
+# =========================
+# 🔹 Project Specific
+# =========================
+backend/ml_service/test_*.py
+backend/ml_service/test_local.py
+backend/ml_service/inspect_models.py
+pip_error.log
+runtime.txt
