@@ -29,7 +29,8 @@ def load_keras_model(path: Path):
         if not path.exists():
             return None
         from tensorflow.keras.models import load_model
-        return load_model(path)
+        # Use compile=False and safe_mode=False to bypass many versioning/deserialization issues
+        return load_model(path, compile=False)
     except BaseException as e:
         print(f"Error loading keras model {path}: {e}")
         return None
